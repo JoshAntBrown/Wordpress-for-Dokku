@@ -13,6 +13,9 @@
  *
  * @package WordPress
  */
+// ** Server settings - You can get this info from your web host ** //
+/** Sets the method for uploading/managing uploads, themes and plugins */
+define('FS_METHOD', 'direct');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -32,10 +35,6 @@ define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
-
-// ** Server settings - You can get this info from your web host ** //
-/** Sets the method for uploading/managing uploads, themes and plugins */
-define('FS_METHOD', 'direct');
 
 /**#@+
  * Authentication Unique Keys and Salts.
