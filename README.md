@@ -25,3 +25,13 @@ You'll notice that a range of things have changed in our wp-config.php including
 You'll want to make sure you replace `$_SERVER['SERVER_NAME']` with the domain of your website where Wordpress will be running, as setting these settings through the `$_SERVER[]` property is not typically advised as best practice.
 
 We also enter the database information through environment variables, this is the way our Dokku installation passes this information to our applications, but you can also define these in Apache for running locally. Preventing the hassle of ensuring you don't pass database credentials through Git.
+
+As an example, you can do this by adding the following to your server configuration files.
+
+    SetEnv DB_HOST thehost
+    SetEnv DB_NAME thedbname
+    SetEnv DB_PASSWORD thedbpassword
+    SetEnv DB_PORT thedbport
+    SetEnv DB_USER thedbuser
+
+In MAMP Pro this can be done by inserting this under `Additional parameters for <VirtualHost>`
